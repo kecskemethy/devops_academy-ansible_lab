@@ -1,0 +1,250 @@
+{
+  "version": 1,
+  "width": 93,
+  "height": 26,
+  "duration": 15.618367,
+  "command": "C:\\WINDOWS\\system32\\cmd.exe",
+  "title": "devops academy 01: ansible - tools ready",
+  "env": {
+    "TERM": "Command Prompt",
+    "SHELL": "C:\\WINDOWS\\system32\\cmd.exe"
+  },
+  "stdout": [
+    [
+      0.013964,
+      "\u001b[1;1H\u001b[0K\u001b[23;40m                                                                                             \u001b[0m\u001b[2;1H\u001b[0K\u001b[32;40mC:\\Prj\\DevOPs\\DevOPsAcademy-AnsibleLab  \u001b[23;40m                                                     \u001b[0m\u001b[3;1H\u001b[0K\u001b[37;40mλ \u001b[23;40masciinema rec -t \"devops academy 01: ansible - tools ready\"                                \u001b[0m\u001b[4;1H\u001b[0K\u001b[18;40m~ Asciicast recording started.\u001b[23;40m                                                               \u001b[0m\u001b[5;1H\u001b[0K\u001b[18;40m~ Hit Ctrl-D or type \"exit\" to finish.\u001b[23;40m                                                       \u001b[0m\u001b[6;1H\u001b[0K\u001b[23;40m                                                                                             \u001b[0m\u001b[7;1H\u001b[0K\u001b[23;40m                                                                                             \u001b[0m\u001b[8;1H\u001b[0K\u001b[23;40m                                                                                             \u001b[0m\u001b[9;1H\u001b[0K\u001b[23;40m                                                                                             \u001b[0m\u001b[10;1H\u001b[0K\u001b[23;40m                                                                                             \u001b[0m\u001b[11;1H\u001b[0K\u001b[23;40m                                                                                             \u001b[0m\u001b[12;1H\u001b[0K\u001b[23;40m                                                                                             \u001b[0m\u001b[13;1H\u001b[0K\u001b[23;40m                                                                                             \u001b[0m\u001b[14;1H\u001b[0K\u001b[23;40m                                                                                             \u001b[0m\u001b[15;1H\u001b[0K\u001b[23;40m                                                                                             \u001b[0m\u001b[16;1H\u001b[0K\u001b[23;40m                                                                                             \u001b[0m\u001b[17;1H\u001b[0K\u001b[23;40m                                                                                             \u001b[0m\u001b[18;1H\u001b[0K\u001b[23;40m                                                                                             \u001b[0m\u001b[19;1H\u001b[0K\u001b[23;40m                                                                                             \u001b[0m\u001b[20;1H\u001b[0K\u001b[23;40m                                                                                             \u001b[0m\u001b[21;1H\u001b[0K\u001b[23;40m                                                                                             \u001b[0m\u001b[22;1H\u001b[0K\u001b[23;40m                                                                                             \u001b[0m\u001b[23;1H\u001b[0K\u001b[23;40m                                                                                             \u001b[0m\u001b[24;1H\u001b[0K\u001b[23;40m                                                                                             \u001b[0m\u001b[25;1H\u001b[0K\u001b[23;40m                                                                                             \u001b[0m\u001b[6;1H\u001b[\u003e5l"
+    ],
+    [
+      0.018620,
+      "\u001b[2;1H\u001b[0K\u001b[23;40mC:\\Prj\\DevOPs\\DevOPsAcademy-AnsibleLab                                                       \u001b[0m\u001b[3;1H\u001b[0K\u001b[23;40mλ asciinema rec -t \"devops academy 01: ansible - tools ready\"                                \u001b[0m\u001b[4;1H\u001b[0K\u001b[23;40m~ Asciicast recording started.                                                               \u001b[0m\u001b[5;1H\u001b[0K\u001b[23;40m~ Hit Ctrl-D or type \"exit\" to finish.                                                       \u001b[0m"
+    ],
+    [
+      0.010971,
+      "\u001b[6;1H\u001b[0K\u001b[23;40mMicrosoft Windows [Version 10.0.17763.437]                                                   \u001b[0m\u001b[7;1H\u001b[0K\u001b[23;40m(c) 2018 Microsoft Corporation. All rights reserved.                                         \u001b[0m\u001b[8;1H\u001b[0K\u001b[23;0m \u001b[23;0m \u001b[23;0m \u001b[23;0m \u001b[23;40m                                                                                         \u001b[0m\u001b[9;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003e                                                      \u001b[0m\u001b[9;40H"
+    ],
+    [
+      1.291173,
+      "\u001b[9;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003ev                                                     \u001b[0m\u001b[9;41H"
+    ],
+    [
+      0.058080,
+      "\u001b[9;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003eva                                                    \u001b[0m"
+    ],
+    [
+      0.007978,
+      "\u001b[9;42H"
+    ],
+    [
+      0.232823,
+      "\u001b[9;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evar                                                   \u001b[0m\u001b[9;43H"
+    ],
+    [
+      0.759645,
+      "\u001b[9;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003eva                                                    \u001b[0m\u001b[9;42H"
+    ],
+    [
+      0.129805,
+      "\u001b[9;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evag                                                   \u001b[0m\u001b[9;43H"
+    ],
+    [
+      0.210014,
+      "\u001b[9;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evagr                                                  \u001b[0m\u001b[9;44H"
+    ],
+    [
+      0.119058,
+      "\u001b[9;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evagra                                                 \u001b[0m\u001b[9;45H"
+    ],
+    [
+      0.295076,
+      "\u001b[9;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evagran                                                \u001b[0m\u001b[9;46H"
+    ],
+    [
+      0.186245,
+      "\u001b[9;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evagrant                                               \u001b[0m\u001b[9;47H"
+    ],
+    [
+      0.120029,
+      "\u001b[9;48H"
+    ],
+    [
+      0.499756,
+      "\u001b[9;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evagrant v                                             \u001b[0m\u001b[9;49H"
+    ],
+    [
+      0.040691,
+      "\u001b[9;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evagrant ve                                            \u001b[0m\u001b[9;50H"
+    ],
+    [
+      0.139786,
+      "\u001b[9;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evagrant ver                                           \u001b[0m\u001b[9;51H"
+    ],
+    [
+      0.151030,
+      "\u001b[9;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evagrant vers                                          \u001b[0m"
+    ],
+    [
+      0.007979,
+      "\u001b[9;52H"
+    ],
+    [
+      0.111228,
+      "\u001b[9;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evagrant versi                                         \u001b[0m"
+    ],
+    [
+      0.001985,
+      "\u001b[9;53H"
+    ],
+    [
+      0.158402,
+      "\u001b[9;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evagrant versio                                        \u001b[0m\u001b[9;54H"
+    ],
+    [
+      0.089618,
+      "\u001b[9;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evagrant version                                       \u001b[0m\u001b[9;55H"
+    ],
+    [
+      0.808672,
+      "\u001b[10;1H"
+    ],
+    [
+      0.989424,
+      "\u001b[10;1H\u001b[0K\u001b[23;40mInstalled Version: 2.2.4                                                                     \u001b[0m\u001b[11;1H\u001b[0K\u001b[23;40mLatest Version: 2.2.4                                                                        \u001b[0m\u001b[12;1H\u001b[0K\u001b[18;40m \u001b[23;40m                                                                                            \u001b[0m\u001b[13;1H\u001b[0K\u001b[18;40mYou're running an up-to-date version of Vagrant!\u001b[23;40m                                             \u001b[0m\u001b[14;1H"
+    ],
+    [
+      0.052859,
+      "\u001b[14;1H\u001b[0K\u001b[23;0m \u001b[23;0m \u001b[23;0m \u001b[23;0m \u001b[23;40m                                                                                         \u001b[0m\u001b[15;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003e                                                      \u001b[0m\u001b[15;40H"
+    ],
+    [
+      1.399511,
+      "\u001b[15;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003ev                                                     \u001b[0m\u001b[15;41H"
+    ],
+    [
+      0.269957,
+      "\u001b[15;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evb                                                    \u001b[0m\u001b[15;42H"
+    ],
+    [
+      0.169130,
+      "\u001b[15;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evbo                                                   \u001b[0m\u001b[15;43H"
+    ],
+    [
+      0.099890,
+      "\u001b[15;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evbox                                                  \u001b[0m\u001b[15;44H"
+    ],
+    [
+      0.261376,
+      "\u001b[15;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evboxm                                                 \u001b[0m"
+    ],
+    [
+      0.009973,
+      "\u001b[15;45H"
+    ],
+    [
+      0.058190,
+      "\u001b[15;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evboxma                                                \u001b[0m"
+    ],
+    [
+      0.012027,
+      "\u001b[15;46H"
+    ],
+    [
+      0.129729,
+      "\u001b[15;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evboxman                                               \u001b[0m\u001b[15;47H"
+    ],
+    [
+      0.038694,
+      "\u001b[15;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evboxmana                                              \u001b[0m\u001b[15;48H"
+    ],
+    [
+      0.210432,
+      "\u001b[15;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evboxmanag                                             \u001b[0m\u001b[15;49H"
+    ],
+    [
+      0.069610,
+      "\u001b[15;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evboxmanage                                            \u001b[0m\u001b[15;50H"
+    ],
+    [
+      0.671570,
+      "\u001b[15;51H"
+    ],
+    [
+      0.928515,
+      "\u001b[15;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evboxmanage l                                          \u001b[0m\u001b[15;52H"
+    ],
+    [
+      0.111371,
+      "\u001b[15;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evboxmanage li                                         \u001b[0m\u001b[15;53H"
+    ],
+    [
+      0.079036,
+      "\u001b[15;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evboxmanage lis                                        \u001b[0m"
+    ],
+    [
+      0.009998,
+      "\u001b[15;54H"
+    ],
+    [
+      0.149077,
+      "\u001b[15;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evboxmanage list                                       \u001b[0m\u001b[15;55H"
+    ],
+    [
+      0.110321,
+      "\u001b[15;56H"
+    ],
+    [
+      0.240276,
+      "\u001b[15;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evboxmanage list v                                     \u001b[0m\u001b[15;57H"
+    ],
+    [
+      0.129652,
+      "\u001b[15;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evboxmanage list vm                                    \u001b[0m\u001b[15;58H"
+    ],
+    [
+      0.120496,
+      "\u001b[15;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003evboxmanage list vms                                   \u001b[0m"
+    ],
+    [
+      0.009973,
+      "\u001b[15;59H"
+    ],
+    [
+      1.108469,
+      "\u001b[16;1H"
+    ],
+    [
+      0.030918,
+      "\u001b[16;1H\u001b[0K\u001b[23;40m\"De                                                                                          \u001b[0m"
+    ],
+    [
+      0.009973,
+      "\u001b[16;1H\u001b[0K\u001b[23;40m\"Debian_HCOM\" {44c8e1fd-63a5-4fc4-bed2-b1e9d9ee79b0}                                         \u001b[0m\u001b[17;1H\u001b[0K\u001b[23;0m \u001b[23;0m \u001b[23;0m \u001b[23;0m \u001b[23;40m                                                                                         \u001b[0m\u001b[18;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003e                                                      \u001b[0m\u001b[18;40H"
+    ],
+    [
+      1.510712,
+      "\u001b[18;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003ee                                                     \u001b[0m"
+    ],
+    [
+      0.009647,
+      "\u001b[18;41H"
+    ],
+    [
+      0.189384,
+      "\u001b[18;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003eex                                                    \u001b[0m"
+    ],
+    [
+      0.001998,
+      "\u001b[18;42H"
+    ],
+    [
+      0.090968,
+      "\u001b[18;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003eexi                                                   \u001b[0m\u001b[18;43H"
+    ],
+    [
+      0.148799,
+      "\u001b[18;1H\u001b[0K\u001b[23;0mC\u001b[23;0m:\u001b[23;0m\\\u001b[23;0mP\u001b[23;40mrj\\DevOPs\\DevOPsAcademy-AnsibleLab\u003eexit                                                  \u001b[0m\u001b[18;44H"
+    ],
+    [
+      0.718779,
+      "\u001b[19;1H"
+    ]
+  ]
+}
