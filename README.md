@@ -16,7 +16,7 @@ This LAB expects you are working on Windows 10. Of course these tools works fine
 Install them both and make sure their binaries are in PATH.
 
 So if you could test them like e.g. 
- [![asciinema - devops academy 01: ansible - tools ready](https://asciinema.org/a/244396.svg)](https://asciinema.org/a/244396)
+ [![asciicast](https://asciinema.org/a/244396.svg)](https://asciinema.org/a/244396)
  ascii cast file saved in repo [asciinema/244396.json](asciinema/244396.json) - in case above got archived - you can view with `asciinema play asciinema/244396.json`
  if you need asciiname for windows you can install it by following this [build tutorial](https://asciinema.org/a/244387)
  you need to install golang for it first, use msi installer for windows!
@@ -35,7 +35,7 @@ Be aware: It could take much longer for you as vagrant going to download virtual
 - test via SSH: `vagrant ssh acs`
 
 See ascii cast remotely at: 
-[![asciinema - evops academy 01: ansible - tools ready](https://asciinema.org/a/244408.svg)](https://asciinema.org/a/244408)
+[![asciicast](https://asciinema.org/a/244408.svg)](https://asciinema.org/a/244408)
  or repo file via player as previously described as [asciinema/244408.json](asciinema/244408.json)
 
 ## Ansible control server setup (acs)
