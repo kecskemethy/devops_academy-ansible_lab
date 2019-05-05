@@ -4,7 +4,7 @@ This is a hands on introduction lab to Ansible on Windows. I developed and teste
 
 ## Overview
 
-We setup 3 virtual servers in virtualbox. One of them will be our Ansible control server and we set up other two servers and even configure our local server from here using Ansile. Two other servers act as web server and database server.
+We setup 3 virtual servers in virtualbox. One of them will be our Ansible control server and we set up other two servers and even configure our local control server from here using Ansible. Two other servers act as web server and database server.
 
 ### Tools we use
 * vagrant - we us to automate virtual machine creation (in windos host)
@@ -18,11 +18,12 @@ We setup 3 virtual servers in virtualbox. One of them will be our Ansible contro
  - get and install vagrant from https://www.vagrantup.com/downloads.html
  - same for Virtualbox https://www.virtualbox.org/wiki/Downloads
 
-Once done you could test them like e.g.
- [![asciicast](https://asciinema.org/a/244396.svg)](https://asciinema.org/a/244396)
- ascii cast file saved in repo [asciinema/244396.json](asciinema/244396.json) - in case above got archived - you can view with `asciinema play asciinema/244396.json`
- if you need asciiname for windows you can install it by following this [build tutorial](https://asciinema.org/a/244387)
- you need to install golang for it first, use msi installer for windows!
+Once installation is done you could test your tools as you can see in this command line recording:
+[![asciicast](https://asciinema.org/a/244396.svg)](https://asciinema.org/a/244396)
+    Above ascii cast file saved in repo as [asciinema/244396.json](asciinema/244396.json)
+    This is to be on the safe side and in case recording got archived you can still view it with the tool: `asciinema play asciinema/244396.json`
+    If you need asciiname for windows you can install it by following this [build tutorial](https://asciinema.org/a/244387)
+    You need to install golang for windows first. Use the msi installer for windows!
 
 ## Vagrant env setup in host
 
@@ -42,9 +43,9 @@ vagrant ssh acs
 ```
 
 I also recorded a screen cast of this setup so you can watch these few commands how executes and what kind of output to expect.
-Be aware: It could take much longer for you than in the videa as vagrant is going to download virtual machine binaries in the first time (~1.8G).
+Be aware: It could take much longer for you than here as vagrant is going to download virtual machine binaries in the first time (~1.8G).
 [![asciicast](https://asciinema.org/a/244408.svg)](https://asciinema.org/a/244408)
- or repo file via player as previously described as [asciinema/244408.json](asciinema/244408.json)
+ backup asciicast file is [asciinema/244408.json](asciinema/244408.json)
 
 ## Ansible control server setup (acs)
 
@@ -76,7 +77,9 @@ Steps:
     exit
     ```
 
-### gen SSH key in control server and add it to web and db server. test ssh connection.
+### Setup paswordless server communication using SSH key in control server
+
+We generate an ssh key in acs and add the public key to both web and db server. Finally test SSH connection.
 
     ```bash
     vagrant ssh acs
@@ -102,9 +105,14 @@ Steps:
 
     screen cast of above two in one
     [![asciicast](https://asciinema.org/a/244464.svg)](https://asciinema.org/a/244464)
-    dont forget to setup the uuthorized key for db server as well as that part is not recorded.
+     backup asciicast file is [asciinema/244464.json](asciinema/244464.json)
+
+    Dont forget to setup the uuthorized key for db server as well as that part is not recorded.
 
 ### Ansible setup in acs
+
+We download the code to acs and copy over ansible configs and roles to ansible system config folder /etc/ansible.
+Finally test if ansible can talk to our hosts aka can use our configs.
 
     ```bash
     # ssh to control server
@@ -131,7 +139,8 @@ Steps:
     ```
 
     screen cast of above:
-
+    [![asciicast](https://asciinema.org/a/244524.svg)](https://asciinema.org/a/244524)
+     backup asciicast file is [asciinema/244524.json](asciinema/244524.json)
 
 ## Ansible in command line
 
@@ -159,11 +168,17 @@ Here are a few command line options to try in the control server. This is not th
     exit
     ```
 
+    screen cast of above:
+    [![asciicast](https://asciinema.org/a/244529.svg)](https://asciinema.org/a/244529)
+     backup asciicast file is [asciinema/244529.json](asciinema/244529.json)
+
 ## Ansible plays and playbooks
 
-  This is the main use case of ansible. When we write multiple plays and add them into a playbook to apply all to multiple servers.
-  The code in a previous step from the reposiotry already copied to /etc/ansible.
-  Here take a look either on the control server or in github into the structure and the yaml files.
+This is the main use case of ansible. When we write multiple plays and add them into a playbook to apply all to multiple servers.
+The code in a previous step from the reposiotry already copied to /etc/ansible.
+Here take a look either on the control server or in github into the structure and the yaml files.
+
+The plays and playbook originally created as part of https://github.com/ansible/ansible-examples/tree/master/lamp_simple but modified to work in our environment and made it debian compatible.
 
     ```bash
     vagrant ssh acs
@@ -175,4 +190,5 @@ Here are a few command line options to try in the control server. This is not th
     ```
 
     screen cast of above:
-
+    [![asciicast](https://asciinema.org/a/244533.svg)](https://asciinema.org/a/244533)
+     backup asciicast file is [asciinema/244533.json](asciinema/244533.json)
