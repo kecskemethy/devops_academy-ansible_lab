@@ -61,116 +61,116 @@ Steps:
 
 ### To able refer OS level other virutal servers using their name we add them into /etc/hosts in acs
 
-    ```bash
-    vagrant ssh acs
-    sudo su -
-    cat << EOF >> /etc/hosts
+```bash
+vagrant ssh acs
+sudo su -
+cat << EOF >> /etc/hosts
 
-    192.168.33.20 web
-    192.168.33.30 db
-    EOF
-    exit
-    ping web
-    ^C
-    ping db
-    ^C
-    exit
-    ```
+192.168.33.20 web
+192.168.33.30 db
+EOF
+exit
+ping web
+^C
+ping db
+^C
+exit
+```
 
 ### Setup paswordless server communication using SSH key in control server
 
 We generate an ssh key in acs and add the public key to both web and db server. Finally test SSH connection.
 
-    ```bash
-    vagrant ssh acs
-    ssh-keygen -b 4096
-    tree .ssh/
-    cat .ssh/id_rsa.pub
-    exit
-    vagrant ssh web
-    sudo yum -y install vim
-    vim .ssh/authorized_keys
-    exit
-    vagrant ssh db
-    sudo apt-get -y install vim
-    vim .ssh/authorized_keys
-    exit
-    vagrant ssh acs
-    ssh web
-    exit
-    ssh db
-    exit
-    exit
-    ```
+```bash
+vagrant ssh acs
+ssh-keygen -b 4096
+tree .ssh/
+cat .ssh/id_rsa.pub
+exit
+vagrant ssh web
+sudo yum -y install vim
+vim .ssh/authorized_keys
+exit
+vagrant ssh db
+sudo apt-get -y install vim
+vim .ssh/authorized_keys
+exit
+vagrant ssh acs
+ssh web
+exit
+ssh db
+exit
+exit
+```
 
-    screen cast of above two in one
-    [![asciicast](https://asciinema.org/a/244464.svg)](https://asciinema.org/a/244464)
-     backup asciicast file is [asciinema/244464.json](asciinema/244464.json)
+screen cast of above two in one
+[![asciicast](https://asciinema.org/a/244464.svg)](https://asciinema.org/a/244464)
+    backup asciicast file is [asciinema/244464.json](asciinema/244464.json)
 
-    Dont forget to setup the uuthorized key for db server as well as that part is not recorded.
+Dont forget to setup the uuthorized key for db server as well as that part is not recorded.
 
 ### Ansible setup in acs
 
 We download the code to acs and copy over ansible configs and roles to ansible system config folder /etc/ansible.
 Finally test if ansible can talk to our hosts aka can use our configs.
 
-    ```bash
-    # ssh to control server
-    vagrant ssh acs
-    # get ansible code to acs into vagrant user's home
-    git clone https://github.com/kecskemethy/devops_academy-ansible_lab.git
-    #change to root user
-    sudo su -
-    apt-get update
-    apt-cache search ansible
-    apt-get -y install ansible
-    cd /home/vagrant/devops_academy-ansible_lab/ansible/
-    cp -r group_vars roles *.patch site.yml /etc/ansible
-    cd /etc/ansible
-    # patch ansible inventory
-    patch < hosts.patch
-    # patch ansible configuration
-    patch < ansible.cfg.patch
-    # exit from root shell
-    exit
-    # test ansible, see if it can work with hosts defined in its inventory /etc/ansible/hosts
-    ansible all -m ping
-    exit
-    ```
+```bash
+# ssh to control server
+vagrant ssh acs
+# get ansible code to acs into vagrant user's home
+git clone https://github.com/kecskemethy/devops_academy-ansible_lab.git
+#change to root user
+sudo su -
+apt-get update
+apt-cache search ansible
+apt-get -y install ansible
+cd /home/vagrant/devops_academy-ansible_lab/ansible/
+cp -r group_vars roles *.patch site.yml /etc/ansible
+cd /etc/ansible
+# patch ansible inventory
+patch < hosts.patch
+# patch ansible configuration
+patch < ansible.cfg.patch
+# exit from root shell
+exit
+# test ansible, see if it can work with hosts defined in its inventory /etc/ansible/hosts
+ansible all -m ping
+exit
+```
 
-    screen cast of above:
-    [![asciicast](https://asciinema.org/a/244524.svg)](https://asciinema.org/a/244524)
-     backup asciicast file is [asciinema/244524.json](asciinema/244524.json)
+screen cast of above:
+[![asciicast](https://asciinema.org/a/244524.svg)](https://asciinema.org/a/244524)
+    backup asciicast file is [asciinema/244524.json](asciinema/244524.json)
 
 ## Ansible in command line
 
 Here are a few command line options to try in the control server. This is not the main use case of Ansible but it is always good to know that we can do on-demand modifications on serves using ansible from command line without scripts.
 
-    ```bash
-    # login to control server
-    vagrant ssh acs
-    # test with ping module, -vvv extra debug output
-    ansible all -m ping -vvv
-    # run commands on servers using command module
-    ansible web -m command -a "cat /etc/os-release"
-    ansible all -m command -a "cat /etc/os-release"
-    ansible db -m command -a "cat /etc/debian_version"
-    ansible web -m command -a "sudo yum -y install mc"
-    # soft install using command module (this is the default module so we can skip this -m command option)
-    ansible web -a "sudo yum -y install mc"
-    # install using yum module for redhat based systems (package module could be a better idea to use as it can handle multiple OSs)
-    ansible webservers -m yum -a "name=httpd state=present" --sudo
-    # create user for server, suer module
-    ansible db -m user -a "name=dbuser password=dbuserpwd" --sudo
-    # setup module to see ansible variables
-    ansible web -m setup
-    ansible web -m setup -a "filter=ansible_eth*"
-    exit
-    ```
+```bash
+# login to control server
+vagrant ssh acs
+# test with ping module, -vvv extra debug output
+ansible all -m ping -vvv
+# run commands on servers using command module
+ansible web -m command -a "cat /etc/os-release"
+ansible all -m command -a "cat /etc/os-release"
+ansible db -m command -a "cat /etc/debian_version"
+ansible web -m command -a "sudo yum -y install mc"
+# soft install using command module (this is the default module so we can skip this -m command option)
+ansible web -a "sudo yum -y install mc"
+# install using yum module for redhat based systems (package module could be a better idea to use as it can handle multiple OSs)
+ansible webservers -m yum -a "name=httpd state=present" --sudo
+# create user for server, suer module
+ansible db -m user -a "name=dbuser password=dbuserpwd" --sudo
+# setup module to see ansible variables
+ansible web -m setup
+ansible web -m setup -a "filter=ansible_eth*"
+exit
+```
 
-    screen cast of above:
-    [![asciicast](https://asciinema.org/a/244529.svg)](https://asciinema.org/a/244529)
-     backup asciicast file is [asciinema/244529.json](asciinema/244529.json)
+screen cast of above:
+[![asciicast](https://asciinema.org/a/244529.svg)](https://asciinema.org/a/244529)
+    backup asciicast file is [asciinema/244529.json](asciinema/244529.json)
 
 ## Ansible plays and playbooks
 
@@ -180,15 +180,15 @@ Here take a look either on the control server or in github into the structure an
 
 The plays and playbook originally created as part of https://github.com/ansible/ansible-examples/tree/master/lamp_simple but modified to work in our environment and made it debian compatible.
 
-    ```bash
-    vagrant ssh acs
-    cd /etc/ansible/
-    # check the structure
-    tree
-    # apply the infra code
-    ansible-playbook site.yml
-    ```
+```bash
+vagrant ssh acs
+cd /etc/ansible/
+# check the structure
+tree
+# apply the infra code
+ansible-playbook site.yml
+```
 
-    screen cast of above:
-    [![asciicast](https://asciinema.org/a/244533.svg)](https://asciinema.org/a/244533)
-     backup asciicast file is [asciinema/244533.json](asciinema/244533.json)
+screen cast of above:
+[![asciicast](https://asciinema.org/a/244533.svg)](https://asciinema.org/a/244533)
+    backup asciicast file is [asciinema/244533.json](asciinema/244533.json)
