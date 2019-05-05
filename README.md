@@ -51,6 +51,7 @@ Steps:
 1. login back to acs and test if our passwordless / key based connection works between our servers
 
 - To refer OS level other virutal servers in name we can add them into  /etc/hosts
+
     ```bash
     vagrant ssh acs
     sudo su -
@@ -66,7 +67,9 @@ Steps:
     ^C
     exit
     ```
+
 - gen SSH key in control server and add it into web and test
+
     ```bash
     vagrant ssh acs
     ssh-keygen -b 4096
@@ -82,9 +85,13 @@ Steps:
     exit
     exit
     ```
+
     screen cast of above two in one
     [![asciicast](https://asciinema.org/a/244464.svg)](https://asciinema.org/a/244464)
+    dont forget to setup the uuthorized key for db server as well.
+
 - finally ansible setup in acs
+
     ```bash
     vagrant ssh acs
     sudo su -
@@ -92,73 +99,33 @@ Steps:
     apt-cache search ansible
     apt-get install ansible
     cd /etc/ansible
-    cat <<EOT > ansible.cfg.patch
-    --- ansible.cfg 2019-05-05 10:08:28.001986218 +0000
-    +++ ansible.cfg.ok      2019-05-05 10:08:16.197986218 +0000
-    @@ -59,7 +59,7 @@
-    #roles_path    = /etc/ansible/roles
-
-    # uncomment this to disable SSH key host checking
-    -#host_key_checking = False
-    +host_key_checking = False
-
-    # change the default callback, you can only have one 'stdout' type  enabled at a time.
-    #stdout_callback = skippy
-    EOT
-    cat <<EOT > hosts.patch
-    --- hosts       2019-05-05 10:02:16.769986218 +0000
-    +++ hosts.ok    2019-05-05 09:59:41.389986218 +0000
-    @@ -14,14 +14,16 @@
-    #blue.example.com
-    #192.168.100.1
-    #192.168.100.10
-    +acs ansible_connection=local
-
-    # Ex 2: A collection of hosts belonging to the 'webservers' group
-
-    -#[webservers]
-    +[webservers]
-    #alpha.example.org
-    #beta.example.org
-    #192.168.1.100
-    #192.168.1.110
-    +web ansible_host=192.168.33.20
-
-    # If you have multiple hosts following a pattern you can specify
-    # them like this:
-    @@ -30,12 +32,13 @@
-
-    # Ex 3: A collection of database servers in the 'dbservers' group
-
-    -#[dbservers]
-    +[dbservers]
-    #
-    #db01.intranet.mydomain.net
-    #db02.intranet.mydomain.net
-    #10.25.1.56
-    #10.25.1.57
-    +db ansible_host=192.168.33.30
-
-    # Here's another example of host ranges, this time there are no
-    # leading 0s:
-    EOT
+    wget https://raw.githubusercontent.com/kecskemethy/devops_academy-ansible_lab/master/ansible/ansible.cfg.patch
+    wget https://raw.githubusercontent.com/kecskemethy/devops_academy-ansible_lab/master/ansible/hosts.patch
     patch < hosts.patch
-    cat ansible.cfg.patch
+    patch < ansible.cfg.patch
     exit
     ansible all -m ping
+    exit
     ```
 
-- a few more command line options to try for ansible.
+## Ansible in command line
 
-```bash
-ansible all -m ping -vvv
-ansible web -m command -a "cat /etc/os-release"
-ansible all -m command -a "cat /etc/os-release"
-ansible db -m command -a "cat /etc/debian_version"
-ansible web -m command -a "sudo yum -y install mc"
-ansible web -a "sudo yum -y install mc"
-ansible webservers -m yum -a "name=httpd state=present" --sudo
-ansible db -m user -a "name=dbuser password=dbuserpwd" --sudo
-ansible web -m setup
-ansible web -m setup -a "filter=ansible_eth*"
-```
+- Here are a few  command line options to try in the control server.
+
+    ```bash
+    vagrant ssh acs
+    ansible all -m ping -vvv
+    ansible web -m command -a "cat /etc/os-release"
+    ansible all -m command -a "cat /etc/os-release"
+    ansible db -m command -a "cat /etc/debian_version"
+    ansible web -m command -a "sudo yum -y install mc"
+    ansible web -a "sudo yum -y install mc"
+    ansible webservers -m yum -a "name=httpd state=present" --sudo
+    ansible db -m user -a "name=dbuser password=dbuserpwd" --sudo
+    ansible web -m setup
+    ansible web -m setup -a "filter=ansible_eth*"
+    exit
+    ```
+
+## Ansible plays and playbooks
+

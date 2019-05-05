@@ -1,0 +1,31 @@
+---
+# This playbook contains common plays that will be run on all nodes.
+
+- name: Install ntp
+  package: name=ntp state=present
+  tags: ntp
+
+- name: Configure ntp file
+  template: src=ntp.conf.j2 dest=/etc/ntp.conf
+  tags: ntp
+  notify: restart ntp
+
+- name: Start the ntp service (debian)
+  service: name=ntp state=started enabled=yes
+  tags: ntp
+  when: ansible_os_family == 'Debian'
+  
+- name: Start the ntp service (redhat)
+  service: name=ntpd state=started enabled=yes
+  tags: ntp
+  when: ansible_os_family == 'RedHat'
+
+- name: Install selinux-utils
+  apt: name=selinux-utils state=present
+  tags: ntp
+  when: ansible_os_family == 'Debian'
+
+- name: test to see if selinux is running
+  command: getenforce
+  register: sestatus
+  changed_when: false
